@@ -3,58 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Crime Unit Security - Elite security solutions for businesses and individuals.">
+    <meta name="description" content="Crime Unit Security - Providing elite security solutions, cyber security, and risk management.">
     <meta name="keywords" content="Security, Private Security, Cyber Security, Risk Management, Crime Prevention">
     <meta name="author" content="Crime Unit Security">
-    <meta property="og:title" content="Crime Unit Security - Your Safety, Our Priority">
-    <meta property="og:description" content="Providing elite security solutions, cyber security, and risk management.">
-    <meta property="og:image" content="https://source.unsplash.com/1600x900/?security">
-    <meta property="og:url" content="https://your-username.github.io/repository-name/">
-    <meta name="twitter:card" content="summary_large_image">
     
     <title>Crime Unit Security | Your Safety, Our Priority</title>
 
     <!-- IBM Carbon Design System -->
     <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
-    
+
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://source.unsplash.com/50x50/?shield,safety">
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-Y"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-XXXXX-Y');
-    </script>
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Crime Unit Security",
-        "image": "https://source.unsplash.com/1600x900/?security",
-        "telephone": "+27 123 456 789",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "59/8155 Sebota Street",
-            "addressLocality": "Windmill Park, Boksburg",
-            "addressRegion": "Gauteng",
-            "postalCode": "1459",
-            "addressCountry": "ZA"
-        },
-        "openingHours": "Mo-Fr 08:00-18:00",
-        "priceRange": "$$"
-    }
-    </script>
 </head>
 <body>
 
@@ -64,14 +29,6 @@
     <!-- Navbar -->
     <header class="bx--header">
         <a href="#" class="bx--header__name">Crime Unit Security</a>
-        <nav class="bx--header__nav">
-            <ul class="bx--header__menu">
-                <li class="bx--header__menu-item"><a href="#services">Services</a></li>
-                <li class="bx--header__menu-item"><a href="#about">About Us</a></li>
-                <li class="bx--header__menu-item"><a href="#contact">Contact</a></li>
-                <li class="bx--header__menu-item"><button class="bx--btn bx--btn--primary">Get a Quote</button></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -85,15 +42,15 @@
     <section id="services" class="services">
         <h2>Our Services</h2>
         <div class="service-cards">
-            <div class="bx--tile">
+            <div class="service-card">
                 <h3>Cyber Security</h3>
                 <p>Advanced threat detection & data protection.</p>
             </div>
-            <div class="bx--tile">
+            <div class="service-card">
                 <h3>Executive Protection</h3>
                 <p>High-profile client security & risk management.</p>
             </div>
-            <div class="bx--tile">
+            <div class="service-card">
                 <h3>Event Security</h3>
                 <p>Comprehensive crowd control & surveillance.</p>
             </div>
@@ -103,7 +60,6 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Get in Touch</h2>
-        <p>For inquiries, reach out to us anytime.</p>
         <form>
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
@@ -112,13 +68,6 @@
         </form>
     </section>
 
-    <!-- Exit Intent Popup -->
-    <div id="exit-popup">
-        <p>Wait! Before You Leave...</p>
-        <p>Get a Free Security Consultation!</p>
-        <button id="close-popup">Close</button>
-    </div>
-
     <!-- WhatsApp Chat Button -->
     <a href="https://wa.me/YOURNUMBER" target="_blank" class="whatsapp-float">
         📞 Chat with Us
@@ -126,7 +75,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 Crime Unit Security. All Rights Reserved.</p>
+        <p>&copy; <span id="year"></span> Crime Unit Security. All Rights Reserved.</p>
     </footer>
 
     <!-- Custom JavaScript -->
