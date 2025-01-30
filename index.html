@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Crime Unit Security (CUS) - Providing elite security solutions, cyber security, and risk management.">
+    <meta name="description" content="Crime Unit Security - Elite security solutions for businesses and individuals.">
     <meta name="keywords" content="Security, Private Security, Cyber Security, Risk Management, Crime Prevention">
     <meta name="author" content="Crime Unit Security">
     <meta property="og:title" content="Crime Unit Security - Your Safety, Our Priority">
@@ -14,12 +14,12 @@
     
     <title>Crime Unit Security | Your Safety, Our Priority</title>
 
-    <!-- IBM Carbon Design System CSS -->
+    <!-- IBM Carbon Design System -->
     <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
-
+    
     <!-- Custom Styles -->
     <link rel="stylesheet" href="style.css">
-
+    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap" rel="stylesheet">
 
@@ -34,8 +34,32 @@
         gtag('js', new Date());
         gtag('config', 'UA-XXXXX-Y');
     </script>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Crime Unit Security",
+        "image": "https://source.unsplash.com/1600x900/?security",
+        "telephone": "+27 123 456 789",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "59/8155 Sebota Street",
+            "addressLocality": "Windmill Park, Boksburg",
+            "addressRegion": "Gauteng",
+            "postalCode": "1459",
+            "addressCountry": "ZA"
+        },
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "priceRange": "$$"
+    }
+    </script>
 </head>
 <body>
+
+    <!-- Dark Mode Toggle -->
+    <button id="dark-mode-toggle">🌙 Dark Mode</button>
 
     <!-- Navbar -->
     <header class="bx--header">
@@ -76,13 +100,6 @@
         </div>
     </section>
 
-    <!-- About Us -->
-    <section id="about" class="about">
-        <h2>About Crime Unit Security</h2>
-        <p>We specialize in providing top-tier security solutions for businesses, executives, and high-risk individuals. Our team comprises ex-military and law enforcement professionals dedicated to ensuring your safety.</p>
-        <button class="bx--btn bx--btn--secondary">Read More</button>
-    </section>
-
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Get in Touch</h2>
@@ -94,6 +111,18 @@
             <button type="submit" class="bx--btn bx--btn--primary">Send Message</button>
         </form>
     </section>
+
+    <!-- Exit Intent Popup -->
+    <div id="exit-popup">
+        <p>Wait! Before You Leave...</p>
+        <p>Get a Free Security Consultation!</p>
+        <button id="close-popup">Close</button>
+    </div>
+
+    <!-- WhatsApp Chat Button -->
+    <a href="https://wa.me/YOURNUMBER" target="_blank" class="whatsapp-float">
+        📞 Chat with Us
+    </a>
 
     <!-- Footer -->
     <footer class="footer">
