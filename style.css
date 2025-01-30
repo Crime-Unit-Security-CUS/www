@@ -47,15 +47,26 @@ body {
 .hero {
     background: url('https://source.unsplash.com/1600x900/?security,guard') no-repeat center center/cover;
     text-align: center;
-    padding: 100px 20px;
-    color: white;
-    animation: fadeIn 2s ease-in-out;
+    padding: 120px 20px;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    display: inline-block;
+    border-radius: 10px;
 }
 
 .hero h1 {
     font-size: 3rem;
     text-transform: uppercase;
     font-weight: bold;
+    color: white;
+}
+
+body:not(.dark-mode) .hero h1 {
+    color: black;
 }
 
 /* Our Services Section */
@@ -65,12 +76,6 @@ body {
     background-color: var(--secondary-bg);
 }
 
-.services h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-/* Services Grid */
 .service-cards {
     display: flex;
     flex-wrap: wrap;
@@ -82,13 +87,88 @@ body {
     background: var(--primary-bg);
     padding: 20px;
     border-radius: 10px;
-    width: 300px;
+    width: 320px;
+    min-height: 180px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .service-card:hover {
     transform: scale(1.05);
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 1rem;
+}
+
+/* Contact Form */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--primary-bg);
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: auto;
+    background: var(--secondary-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 600px) {
+    .form-group {
+        flex-direction: row;
+    }
+}
+
+.form-group input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 /* WhatsApp Floating Button */
@@ -102,6 +182,12 @@ body {
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-float:hover {
+    background-color: #1da851;
 }
 
 /* Footer */
@@ -112,7 +198,26 @@ body {
     color: var(--primary-bg);
 }
 
-/* Fade In Animation */
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: var(--primary-text);
+    color: var(--primary-bg);
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: none;
+    transition: 0.3s;
+}
+
+#dark-mode-toggle:hover {
+    opacity: 0.8;
+}
+
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
