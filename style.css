@@ -1,20 +1,48 @@
+/* Dark Mode */
+:root {
+    --primary-bg: white;
+    --primary-text: black;
+    --accent-color: #1a73e8;
+}
+
+.dark-mode {
+    --primary-bg: #161616;
+    --primary-text: white;
+    --accent-color: #0a66c2;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    transition: 0.3s ease-in-out;
     margin: 0;
     padding: 0;
 }
 
+/* Navbar */
 .bx--header {
-    background: #161616;
+    background: var(--primary-text);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.bx--header a {
+    color: var(--primary-bg);
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Hero Section */
 .hero {
-    background: url('https://source.unsplash.com/1600x900/?security,guard') no-repeat center center;
-    background-size: cover;
+    background: url('https://source.unsplash.com/1600x900/?security') no-repeat center center/cover;
     text-align: center;
-    padding: 100px;
+    padding: 100px 20px;
     color: white;
-    animation: fadeIn 2s ease-in;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .hero h1 {
@@ -22,19 +50,16 @@ body {
     text-transform: uppercase;
 }
 
-.hero button {
-    margin-top: 20px;
-}
-
+/* Services */
 .services {
     text-align: center;
-    padding: 50px;
+    padding: 50px 20px;
 }
 
 .service-cards {
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .bx--tile {
@@ -48,11 +73,12 @@ body {
     transform: scale(1.05);
 }
 
+/* Contact Form */
 .contact {
     background: #000;
     color: white;
     text-align: center;
-    padding: 50px;
+    padding: 50px 20px;
 }
 
 .contact form {
@@ -67,13 +93,77 @@ body {
     padding: 10px;
 }
 
+/* Exit Intent Popup */
+#exit-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#exit-popup button {
+    background: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-float:hover {
+    background-color: #1da851;
+}
+
+/* Dark Mode Toggle */
+#dark-mode-toggle {
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: var(--primary-text);
+    color: var(--primary-bg);
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: none;
+    transition: 0.3s;
+}
+
+#dark-mode-toggle:hover {
+    opacity: 0.8;
+}
+
+/* Footer */
 .footer {
     text-align: center;
     padding: 20px;
-    background: #161616;
-    color: white;
+    background: var(--primary-text);
+    color: var(--primary-bg);
 }
 
+/* Fade In Animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
