@@ -1,13 +1,22 @@
-/* Dark Mode */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Light & Dark Mode Variables */
 :root {
-    --primary-bg: white;
-    --primary-text: black;
+    --primary-bg: #ffffff;
+    --primary-text: #222;
+    --secondary-bg: #f4f4f4;
     --accent-color: #1a73e8;
 }
 
 .dark-mode {
     --primary-bg: #161616;
-    --primary-text: white;
+    --primary-text: #ffffff;
+    --secondary-bg: #1e1e1e;
     --accent-color: #0a66c2;
 }
 
@@ -15,18 +24,16 @@ body {
     font-family: 'Raleway', sans-serif;
     background-color: var(--primary-bg);
     color: var(--primary-text);
-    transition: 0.3s ease-in-out;
-    margin: 0;
-    padding: 0;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* Navbar */
 .bx--header {
     background: var(--primary-text);
-    padding: 10px 20px;
+    padding: 15px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
 
 .bx--header a {
@@ -38,7 +45,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url('https://source.unsplash.com/1600x900/?security') no-repeat center center/cover;
+    background: url('https://source.unsplash.com/1600x900/?security,guard') no-repeat center center/cover;
     text-align: center;
     padding: 100px 20px;
     color: white;
@@ -48,75 +55,43 @@ body {
 .hero h1 {
     font-size: 3rem;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
-/* Services */
+/* Our Services Section */
 .services {
     text-align: center;
-    padding: 50px 20px;
+    padding: 60px 20px;
+    background-color: var(--secondary-bg);
 }
 
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Services Grid */
 .service-cards {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-.bx--tile {
-    width: 30%;
+.service-card {
+    background: var(--primary-bg);
     padding: 20px;
-    background: #f4f4f4;
-    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
 }
 
-.bx--tile:hover {
+.service-card:hover {
     transform: scale(1.05);
 }
 
-/* Contact Form */
-.contact {
-    background: #000;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: auto;
-}
-
-.contact input, .contact textarea {
-    margin: 10px 0;
-    padding: 10px;
-}
-
-/* Exit Intent Popup */
-#exit-popup {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-#exit-popup button {
-    background: red;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-/* WhatsApp Button */
+/* WhatsApp Floating Button */
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
@@ -127,32 +102,6 @@ body {
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 14px;
-    transition: 0.3s;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.whatsapp-float:hover {
-    background-color: #1da851;
-}
-
-/* Dark Mode Toggle */
-#dark-mode-toggle {
-    cursor: pointer;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    background: var(--primary-text);
-    color: var(--primary-bg);
-    padding: 10px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    border: none;
-    transition: 0.3s;
-}
-
-#dark-mode-toggle:hover {
-    opacity: 0.8;
 }
 
 /* Footer */
